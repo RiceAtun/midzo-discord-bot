@@ -12,7 +12,7 @@ client = discord.Client(intents=intents)
 @client.event
 async def on_ready():
     print(f"Midzo está conectado como {client.user}")
-
+await client.change_presence(activity=discord.Game(name="Conociendo a la comunidad"))
 @client.event
 async def on_message(message):
     if message.author.bot:
